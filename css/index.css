@@ -1,0 +1,182 @@
+/* reset start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans KR";
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+/* reset end */
+/* container */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  position: relative;
+}
+
+/* util menu */
+.utilMenu {
+  font-size: 12px;
+}
+.utilMenu > ul {
+  display: flex;
+  gap: 10px;
+}
+.utilMenu.left {
+  position: absolute;
+  top: 0;
+  left: 2%;
+}
+.utilMenu.left ul {
+  gap: 0px;
+}
+.utilMenu.left li {
+  padding: 5px 10px;
+}
+.utilMenu.left li:nth-child(1) {
+  background-color: #f8b915;
+}
+.utilMenu.left li:nth-child(2) {
+  background-color: black;
+  color: white;
+}
+.utilMenu.right {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  color: #9d8f75;
+}
+
+/* navigation(menu) */
+.gnbMenu > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.gnbMenu a {
+  display: block;
+  padding: 10px 16px;
+}
+
+/* hamburger button */
+.toggle-button {
+  display: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.toggle-button > .bar {
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  border-radius: 1px;
+  position: absolute;
+  transition: 0.3s;
+}
+.toggle-button > .bar:nth-child(2) {
+  top: 50%;
+  margin-top: -1px;
+}
+.toggle-button > .bar:nth-child(3) {
+  bottom: 0;
+}
+.toggle-button.active > .bar:nth-child(1) {
+  transform: translate(0, 9px) rotate(45deg);
+}
+.toggle-button.active > .bar:nth-child(2) {
+  opacity: 0;
+}
+.toggle-button.active > .bar:nth-child(3) {
+  transform: translate(0, -9px) rotate(-45deg);
+}
+
+.header {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+}
+
+.footer {
+  background-color: white;
+  padding: 30px 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  height: 300px;
+}
+
+.firstcont {
+  background-color: #f8b915;
+}
+
+.secondcont {
+  background-color: #9d8f75;
+}
+
+.thirdcont {
+  background-color: violet;
+}
+
+.fourthcont {
+  background-color: black;
+}
+
+/* responsive start */
+@media screen and (max-width: 1200px) {
+  .toggle-button {
+    display: block;
+    z-index: 10;
+  }
+  .gnbMenu {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gnbMenu > ul {
+    flex-direction: column;
+  }
+  .gnbMenu.active {
+    /* even though top and left is 0,
+    it will be at center of viewport since we gave
+    dflex justify center and align items center to gnbMenu! */
+    left: 0%;
+  }
+  .container {
+    width: 100%;
+  }
+}
+/* responsive end *//*# sourceMappingURL=index.css.map */

@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+$dark: black;
+$semi-dark: gray;
+$light: white;
+$primary: #f8b915;
+$secondary: #9d8f75;
+$tertiary: violet;
+$shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+$breakpointXXL: 1400px;
+$breakpointXL: 1200px;
+$breakpointL: 992px;
+$breakpointM: 768px;
+$breakpointS: 576px;
+
+/* reset start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Noto Sans KR";
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $dark;
+}
+
+ul,
+li {
+  list-style: none;
+}
+/* reset end */
+
+/* container */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  align-items: center;
+  position: relative;
+}
+
+/* util menu */
+.utilMenu {
+  font-size: 12px;
+  > ul {
+    display: flex;
+    gap: 10px;
+  }
+  &.left {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    ul {
+      gap: 0px;
+    }
+    li {
+      padding: 5px 10px;
+    }
+    li:nth-child(1) {
+      background-color: $primary;
+    }
+    li:nth-child(2) {
+      background-color: $dark;
+      color: $light;
+    }
+  }
+  &.right {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    color: $secondary;
+  }
+}
+
+/* navigation(menu) */
+.gnbMenu {
+  > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  a {
+    display: block;
+    padding: 10px 16px;
+  }
+}
+
+/* hamburger button */
+.toggle-button {
+  display: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  > .bar {
+    width: 20px;
+    height: 2px;
+    background-color: $dark;
+    border-radius: 1px;
+    position: absolute;
+    transition: 0.3s;
+  }
+  > .bar:nth-child(2) {
+    top: 50%;
+    margin-top: -1px;
+  }
+  > .bar:nth-child(3) {
+    bottom: 0;
+  }
+  &.active {
+    > .bar:nth-child(1) {
+      transform: translate(0, 9px) rotate(45deg);
+    }
+    > .bar:nth-child(2) {
+      opacity: 0;
+    }
+    > .bar:nth-child(3) {
+      transform: translate(0, -9px) rotate(-45deg);
+    }
+  }
+}
+
+.header {
+  background-color: $light;
+  box-shadow: $shadow;
+  position: fixed;
+  width: 100%;
+}
+
+.footer {
+  background-color: $light;
+  padding: 30px 0px;
+  box-shadow: $shadow;
+}
+
+.content {
+  height: 300px;
+}
+
+.firstcont {
+  background-color: $primary;
+}
+
+.secondcont {
+  background-color: $secondary;
+}
+
+.thirdcont {
+  background-color: $tertiary;
+}
+
+.fourthcont {
+  background-color: $dark;
+}
+
+/* responsive start */
+@media screen and (max-width: $breakpointXL) {
+  .toggle-button {
+    display: block;
+    z-index: 10;
+  }
+  .gnbMenu {
+    // position fixed positions element relative to the VIEWPORT,
+    // REGARDLESS OF its ANCESTOR'S POSTIONS!
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > ul {
+      flex-direction: column;
+    }
+  }
+  .gnbMenu.active {
+    /* even though top and left is 0,
+    it will be at center of viewport since we gave
+    dflex justify center and align items center to gnbMenu! */
+    left: 0%;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+/* responsive end */
