@@ -207,6 +207,8 @@ li {
   color: white;
   border-radius: 20px;
   padding: 8px 13px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .footer {
@@ -218,8 +220,12 @@ li {
 .content {
   height: 300px;
 }
-.content.firstcont {
+.content.firstcont, .content.secondcont {
   height: auto;
+}
+
+.secondcont {
+  background-color: #9d8f75;
 }
 
 .thirdcont {
@@ -265,6 +271,9 @@ li {
 @media screen and (max-width: 576px) {
   .toggle-button {
     display: none;
+  }
+  .swiper-container.secondSwiper .title {
+    font-size: 12px;
   }
 }
 /* responsive end *//*# sourceMappingURL=index.css.map */

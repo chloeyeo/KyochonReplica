@@ -234,6 +234,8 @@ li {
       color: $light;
       border-radius: 20px;
       padding: 8px 13px; // y x
+      font-size: 16px;
+      margin-bottom: 10px;
     }
   }
 }
@@ -246,14 +248,15 @@ li {
 
 .content {
   height: 300px;
-  &.firstcont {
+  &.firstcont,
+  &.secondcont {
     height: auto;
   }
 }
 
-// .secondcont {
-//   background-color: $secondary;
-// }
+.secondcont {
+  background-color: $secondary;
+}
 
 .thirdcont {
   background-color: $tertiary;
@@ -301,6 +304,9 @@ li {
 @media screen and (max-width: $breakpointS) {
   .toggle-button {
     display: none;
+  }
+  .swiper-container.secondSwiper .title {
+    font-size: 12px;
   }
 }
 
