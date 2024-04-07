@@ -2,6 +2,8 @@
 
 $dark: black;
 $semi-dark: gray;
+$swiperFirst: #d7d7d7;
+$swiperSecond: #aeaeae;
 $light: white;
 $primary: #f8b915;
 $primary2: #ffc500;
@@ -121,7 +123,7 @@ li {
       justify-content: center;
       align-items: center;
       padding: 0 30px;
-      // padding: 0 31px;
+
       &:not(:first-child) {
         background: url("../images/gnbMenuLine.gif") no-repeat left center;
       }
@@ -139,21 +141,45 @@ li {
       }
       .gnbSub {
         display: none;
-        border: 1px solid $semi-dark;
+        width: 100%;
+        position: relative;
+        padding-top: 15px;
+        z-index: 2;
         > .bullet {
-          width: 8px;
-          height: 8px;
-          border: 1px solid $semi-dark;
-          border-radius: 4px;
-          margin: 0 auto;
+          width: 9px;
+          height: 9px;
+          border: 2px solid $swiperFirst;
+          border-radius: 50%;
+          // margin: 0 auto;
+          margin-left: -5px;
+          position: absolute;
+          left: 50%;
+          top: 10px;
+          background-color: $light;
+          z-index: 2;
         }
         > .gnbSubBox {
-          text-align: center;
+          border: 1px solid $swiperFirst;
+          border-radius: 5px;
+          position: absolute;
+          left: 50%;
+          top: 14px;
+          background-color: $light;
+          // width: auto;
+          width: 133px;
+          margin-left: -67px;
+          // text-align: center;
           > a {
-            display: inline-block;
-            width: 100%;
-            border-top: 1px solid $semi-dark;
-            padding: 10px 16px;
+            // display: inline-block;
+            // width: 100%;
+            border-top: 1px solid $swiperFirst;
+            font-size: 12px;
+            line-height: 38px;
+            color: #333;
+            text-align: center;
+            letter-spacing: -1px;
+            display: block;
+            // padding: 10px 16px;
           }
         }
       }
@@ -219,7 +245,7 @@ li {
       justify-content: center;
       align-items: center;
       > img {
-        max-width: 300px;
+        max-width: 200px;
       }
     }
     .swiper-slide {
@@ -237,6 +263,26 @@ li {
       font-size: 16px;
       margin-bottom: 10px;
     }
+    .swiper-button-prev.secondSwiper,
+    .swiper-button-next.secondSwiper {
+      color: $swiperSecond;
+      --swiper-navigation-size: 30px;
+    }
+  }
+  &.firstSwiper {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    .swiper-button-prev.firstSwiper,
+    .swiper-button-next.firstSwiper {
+      color: $swiperFirst;
+      --swiper-navigation-size: 30px;
+    }
+
+    // .swiper-pagination.firstSwiper {
+    //   background-color: $light;
+    //   width: auto; /* Remove fixed width */
+    // }
   }
 }
 
@@ -254,9 +300,9 @@ li {
   }
 }
 
-.secondcont {
-  background-color: $secondary;
-}
+// .secondcont {
+//   background-color: $secondary;
+// }
 
 .thirdcont {
   background-color: $tertiary;
