@@ -247,9 +247,13 @@ li {
 
 .content {
   height: 300px;
+  text-align: center;
 }
 .content.firstcont, .content.secondcont {
   height: auto;
+}
+.content.firstcont {
+  width: 90%;
 }
 
 .thirdcont {

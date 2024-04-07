@@ -295,9 +295,13 @@ li {
 
 .content {
   height: 300px;
+  text-align: center;
   &.firstcont,
   &.secondcont {
     height: auto;
+  }
+  &.firstcont {
+    width: 90%;
   }
 }
 
