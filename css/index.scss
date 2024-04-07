@@ -4,6 +4,7 @@ $dark: black;
 $semi-dark: gray;
 $swiperFirst: #d7d7d7;
 $swiperSecond: #aeaeae;
+$fourthContP: #626262;
 $light: white;
 $primary: #f8b915;
 $primary2: #ffc500;
@@ -295,13 +296,22 @@ li {
 
 .content {
   height: 300px;
-  text-align: center;
+  // text-align: center;
   &.firstcont,
   &.secondcont {
     height: auto;
   }
   &.firstcont {
     width: 90%;
+  }
+  &.secondcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 
@@ -347,7 +357,7 @@ li {
           position: absolute;
           right: 0;
           top: 0;
-          background: url(../images/searchIcon.svg) no-repeat;
+          background: url(../images/mapSearchIcon.svg) no-repeat;
           background-size: 28px auto;
           background-position: center;
           background-color: $dark;
@@ -423,7 +433,24 @@ li {
 }
 
 .fourthcont {
-  background-color: $primary;
+  // background-color: $primary;
+  height: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin-top: 10px;
+    color: $fourthContP;
+  }
+  .icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+  }
 }
 
 /* responsive start */

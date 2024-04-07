@@ -247,13 +247,21 @@ li {
 
 .content {
   height: 300px;
-  text-align: center;
 }
 .content.firstcont, .content.secondcont {
   height: auto;
 }
 .content.firstcont {
   width: 90%;
+}
+.content.secondcont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .thirdcont {
@@ -298,7 +306,7 @@ li {
   position: absolute;
   right: 0;
   top: 0;
-  background: url(../images/searchIcon.svg) no-repeat;
+  background: url(../images/mapSearchIcon.svg) no-repeat;
   background-size: 28px auto;
   background-position: center;
   background-color: black;
@@ -370,7 +378,23 @@ li {
 }
 
 .fourthcont {
-  background-color: #f8b915;
+  height: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fourthcont p {
+  margin-top: 10px;
+  color: #626262;
+}
+.fourthcont .icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
 }
 
 /* responsive start */
