@@ -25,6 +25,10 @@ li {
   list-style: none;
 }
 
+li {
+  cursor: pointer;
+}
+
 /* reset end */
 /* container */
 .container {
@@ -46,7 +50,6 @@ li {
 }
 .utilMenu > ul {
   display: flex;
-  gap: 10px;
 }
 .utilMenu.left {
   position: absolute;
@@ -56,13 +59,13 @@ li {
 .utilMenu.left ul {
   gap: 0px;
 }
-.utilMenu.left li {
+.utilMenu.left ul li {
   padding: 5px 10px;
 }
-.utilMenu.left li:nth-child(1) {
+.utilMenu.left ul li:nth-child(1) {
   background-color: #f8b915;
 }
-.utilMenu.left li:nth-child(2) {
+.utilMenu.left ul li:nth-child(2) {
   background-color: black;
   color: white;
 }
@@ -72,12 +75,41 @@ li {
   right: 2%;
   color: #9d8f75;
 }
+.utilMenu.right li {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.utilMenu.right li:not(:first-child) {
+  background: url(../images/utilMenuRightLine.gif) no-repeat left center;
+}
 
 /* navigation(menu) */
 .gnbMenu > ul {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+}
+.gnbMenu > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+.gnbMenu > ul > li:not(:first-child) {
+  background: url("../images/gnbMenuLine.gif") no-repeat left center;
+}
+.gnbMenu > ul > li:hover .gnbSub {
+  display: flex;
+}
+.gnbMenu > ul > li:hover > a:first-child {
+  background-color: #ffc500;
+  padding: 0;
+  border-radius: 10px;
+}
+.gnbMenu > ul > li .gnbSub {
+  display: none;
 }
 .gnbMenu a {
   display: block;
@@ -174,6 +206,9 @@ li {
     it will be at center of viewport since we gave
     dflex justify center and align items center to gnbMenu! */
     left: 0%;
+  }
+  .gnbMenu.active li {
+    background: none !important;
   }
   .container {
     width: 100%;

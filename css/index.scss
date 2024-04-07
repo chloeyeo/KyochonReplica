@@ -4,6 +4,7 @@ $dark: black;
 $semi-dark: gray;
 $light: white;
 $primary: #f8b915;
+$primary2: #ffc500;
 $secondary: #9d8f75;
 $tertiary: violet;
 $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -39,6 +40,9 @@ ul,
 li {
   list-style: none;
 }
+li {
+  cursor: pointer;
+}
 /* reset end */
 
 /* container */
@@ -60,7 +64,6 @@ li {
   font-size: 12px;
   > ul {
     display: flex;
-    gap: 10px;
   }
   &.left {
     position: absolute;
@@ -68,16 +71,16 @@ li {
     left: 2%;
     ul {
       gap: 0px;
-    }
-    li {
-      padding: 5px 10px;
-    }
-    li:nth-child(1) {
-      background-color: $primary;
-    }
-    li:nth-child(2) {
-      background-color: $dark;
-      color: $light;
+      li {
+        padding: 5px 10px;
+        &:nth-child(1) {
+          background-color: $primary;
+        }
+        &:nth-child(2) {
+          background-color: $dark;
+          color: $light;
+        }
+      }
     }
   }
   &.right {
@@ -85,6 +88,15 @@ li {
     top: 0;
     right: 2%;
     color: $secondary;
+    li {
+      padding: 5px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:not(:first-child) {
+        background: url(../images/utilMenuRightLine.gif) no-repeat left center; // this not working either!
+      }
+    }
   }
 }
 
@@ -93,7 +105,32 @@ li {
   > ul {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    > li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 30px;
+      // padding: 0 31px;
+      &:not(:first-child) {
+        background: url("../images/gnbMenuLine.gif") no-repeat left center;
+      }
+      &:hover {
+        .gnbSub {
+          display: flex;
+        }
+        > a {
+          &:first-child {
+            background-color: $primary2;
+            padding: 0;
+            border-radius: 10px;
+          }
+        }
+      }
+      .gnbSub {
+        display: none;
+      }
+    }
   }
   a {
     display: block;
@@ -195,6 +232,9 @@ li {
     it will be at center of viewport since we gave
     dflex justify center and align items center to gnbMenu! */
     left: 0%;
+    li {
+      background: none !important;
+    }
   }
   .container {
     width: 100%;
