@@ -9,9 +9,17 @@
       href="https://fonts.googleapis.com/css?family=Noto Sans KR"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <!-- Loading spinner -->
+    <div class="loading">
+      <img src="./images/loading.gif" alt="Loading..." />
+    </div>
     <!-- header start -->
     <div class="header">
       <!-- <div class="container layout"> -->
@@ -127,8 +135,79 @@
     </div>
     <!-- header end -->
     <!-- content start -->
-    <div class="container content firstcont"></div>
-    <div class="container content secondcont"></div>
+    <div class="container content firstcont">
+      <!-- Slider main container -->
+      <div class="swiper swiper-container firstSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner1.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner2.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner3.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner4.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner5.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner6.jpg" /></a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/banner7.jpg" /></a>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination firstSwiper"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev firstSwiper"></div>
+        <div class="swiper-button-next firstSwiper"></div>
+      </div>
+    </div>
+    <div class="container content secondcont">
+      <!-- Slider main container -->
+      <div class="swiper swiper-container secondSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/교촌오리지날.png" /></a>
+            <div class="title">교촌오리지날</div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/허니순살.png" /></a>
+            <div class="title">허니순살</div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/레드순살.png" /></a>
+            <div class="title">레드순살</div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/레허반반순살.png" /></a>
+            <div class="title">레허반반순살</div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images/반반점보윙레허.png" /></a>
+            <div class="title">반반점보윙(레드/허니)</div>
+          </div>
+          <div class="swiper-slide">
+            <a href="#"><img src="./images//반반점보윙교레.png" /></a>
+            <div class="title">반반점보윙(교촌/레드)</div>
+          </div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev secondSwiper"></div>
+        <div class="swiper-button-next secondSwiper"></div>
+      </div>
+    </div>
     <div class="container content thirdcont"></div>
     <div class="container content fourthcont"></div>
     <!-- content end -->
@@ -139,5 +218,7 @@
     <!-- footer end -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- type="module" to be able to import modules inside index js -->
+  <script type="module" src="./js/index.js"></script>
 </html>

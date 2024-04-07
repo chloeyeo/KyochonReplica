@@ -30,6 +30,16 @@ li {
 }
 
 /* reset end */
+/* loading gif */
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* container */
 .container {
   width: 1200px;
@@ -101,7 +111,7 @@ li {
   background: url("../images/gnbMenuLine.gif") no-repeat left center;
 }
 .gnbMenu > ul > li:hover .gnbSub {
-  display: flex;
+  display: inline-block;
 }
 .gnbMenu > ul > li:hover > a:first-child {
   background-color: #ffc500;
@@ -110,9 +120,22 @@ li {
 }
 .gnbMenu > ul > li .gnbSub {
   display: none;
+  border: 1px solid gray;
 }
-.gnbMenu a {
-  display: block;
+.gnbMenu > ul > li .gnbSub > .bullet {
+  width: 8px;
+  height: 8px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.gnbMenu > ul > li .gnbSub > .gnbSubBox {
+  text-align: center;
+}
+.gnbMenu > ul > li .gnbSub > .gnbSubBox > a {
+  display: inline-block;
+  width: 100%;
+  border-top: 1px solid gray;
   padding: 10px 16px;
 }
 
@@ -154,6 +177,36 @@ li {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   width: 100%;
+  position: relative;
+}
+
+/* swiper */
+.swiper-container {
+  width: 100%;
+}
+.swiper-container .swiper-slide img {
+  width: 100%;
+}
+.swiper-container.secondSwiper a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-container.secondSwiper a > img {
+  max-width: 300px;
+}
+.swiper-container.secondSwiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-container.secondSwiper .title {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 13px;
 }
 
 .footer {
@@ -165,13 +218,8 @@ li {
 .content {
   height: 300px;
 }
-
-.firstcont {
-  background-color: #f8b915;
-}
-
-.secondcont {
-  background-color: #9d8f75;
+.content.firstcont {
+  height: auto;
 }
 
 .thirdcont {
@@ -212,6 +260,11 @@ li {
   }
   .container {
     width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .toggle-button {
+    display: none;
   }
 }
 /* responsive end *//*# sourceMappingURL=index.css.map */
