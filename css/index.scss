@@ -7,6 +7,7 @@ $swiperSecond: #aeaeae;
 $light: white;
 $primary: #f8b915;
 $primary2: #ffc500;
+$primary3: #ffcb44;
 $secondary: #9d8f75;
 $tertiary: violet;
 $shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -305,11 +306,120 @@ li {
 // }
 
 .thirdcont {
-  background-color: $tertiary;
+  background-color: $primary3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+  h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .storeSearch {
+    height: auto;
+    width: 50%;
+    padding: 30px;
+    .formWrap {
+      padding-right: 60px;
+      position: relative;
+      .form {
+        margin: 0;
+        padding: 0;
+        input {
+          width: 100%;
+          line-height: 60px;
+          height: 60px;
+          padding: 0 10px;
+        }
+        .searchBtn {
+          height: 60px;
+          width: 60px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: url(../images/searchIcon.svg) no-repeat;
+          background-size: 28px auto;
+          background-position: center;
+          background-color: $dark;
+        }
+      }
+      .searchResult {
+        margin-top: 30px;
+        .listWrap {
+          border-top: 1px solid $light;
+          padding: 15px 0;
+          .searchList {
+            height: 109px;
+            background: red;
+          }
+        }
+      }
+    }
+  }
+  .boxRight {
+    height: auto;
+    padding: 30px;
+    width: 50%;
+    border-left: 1px solid $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .infoList {
+      font-size: 0;
+      padding: 0;
+      width: 100%;
+      li {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        &:first-child {
+          padding-top: 0;
+          .eventImg {
+            background: url("../images/event.png") $light no-repeat center;
+            background-size: 90px auto;
+          }
+        }
+        &:last-child {
+          margin: 0;
+          .newsImg {
+            background: url("../images/news.png") $light no-repeat center;
+            background-size: 90px auto;
+          }
+        }
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+          div:first-child {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            margin: auto;
+          }
+          div:last-child {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .fourthcont {
-  background-color: $dark;
+  background-color: $primary;
 }
 
 /* responsive start */

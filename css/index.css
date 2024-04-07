@@ -253,11 +253,120 @@ li {
 }
 
 .thirdcont {
-  background-color: violet;
+  background-color: #ffcb44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+}
+.thirdcont h3 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thirdcont .storeSearch {
+  height: auto;
+  width: 50%;
+  padding: 30px;
+}
+.thirdcont .storeSearch .formWrap {
+  padding-right: 60px;
+  position: relative;
+}
+.thirdcont .storeSearch .formWrap .form {
+  margin: 0;
+  padding: 0;
+}
+.thirdcont .storeSearch .formWrap .form input {
+  width: 100%;
+  line-height: 60px;
+  height: 60px;
+  padding: 0 10px;
+}
+.thirdcont .storeSearch .formWrap .form .searchBtn {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: url(../images/searchIcon.svg) no-repeat;
+  background-size: 28px auto;
+  background-position: center;
+  background-color: black;
+}
+.thirdcont .storeSearch .formWrap .searchResult {
+  margin-top: 30px;
+}
+.thirdcont .storeSearch .formWrap .searchResult .listWrap {
+  border-top: 1px solid white;
+  padding: 15px 0;
+}
+.thirdcont .storeSearch .formWrap .searchResult .listWrap .searchList {
+  height: 109px;
+  background: red;
+}
+.thirdcont .boxRight {
+  height: auto;
+  padding: 30px;
+  width: 50%;
+  border-left: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thirdcont .boxRight .infoList {
+  font-size: 0;
+  padding: 0;
+  width: 100%;
+}
+.thirdcont .boxRight .infoList li {
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.thirdcont .boxRight .infoList li:first-child {
+  padding-top: 0;
+}
+.thirdcont .boxRight .infoList li:first-child .eventImg {
+  background: url("../images/event.png") white no-repeat center;
+  background-size: 90px auto;
+}
+.thirdcont .boxRight .infoList li:last-child {
+  margin: 0;
+}
+.thirdcont .boxRight .infoList li:last-child .newsImg {
+  background: url("../images/news.png") white no-repeat center;
+  background-size: 90px auto;
+}
+.thirdcont .boxRight .infoList li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.thirdcont .boxRight .infoList li a div:first-child {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  margin: auto;
+}
+.thirdcont .boxRight .infoList li a div:last-child {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin-top: 10px;
 }
 
 .fourthcont {
-  background-color: black;
+  background-color: #f8b915;
 }
 
 /* responsive start */
