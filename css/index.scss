@@ -435,6 +435,7 @@ li {
 .fourthcont {
   // background-color: $primary;
   height: auto;
+  width: 80%;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
@@ -445,11 +446,37 @@ li {
     color: $fourthContP;
   }
   .icons {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 20%;
+    li {
+      div {
+        background: red;
+        margin: auto;
+        background-color: $light;
+        margin-top: -10px;
+        line-height: 1.5;
+        font-size: 16px;
+        width: 110px;
+        border-radius: 20px;
+        box-shadow: $shadow;
+        padding: 8px 32px 8px 12px;
+        position: relative;
+        &::after {
+          content: "";
+          top: 50%;
+          margin-top: -8px;
+          width: 15px;
+          height: 15px;
+          background: url(../images/fourthContSearchIcon.svg) no-repeat center;
+          position: absolute;
+          right: 12px;
+        }
+      }
+    }
   }
 }
 
