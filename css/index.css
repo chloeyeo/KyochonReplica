@@ -274,7 +274,6 @@ li {
 }
 .thirdcont h3 {
   font-size: 26px;
-  font-weight: 700;
   line-height: 30px;
   margin-bottom: 50px;
   display: flex;
@@ -443,7 +442,7 @@ li {
 }
 .footer .firstSection .wrap a:nth-child(2) {
   color: black;
-  font-weight: 700;
+  font-weight: bold;
 }
 .footer .firstSection .wrap a:not(:first-child) {
   background: url(../images/footerFirstLineSeperator.gif) no-repeat left 5px;

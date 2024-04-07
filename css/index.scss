@@ -329,7 +329,6 @@ li {
   padding: 20px;
   h3 {
     font-size: 26px;
-    font-weight: 700;
     line-height: 30px;
     margin-bottom: 50px;
     display: flex;
@@ -503,7 +502,7 @@ li {
       }
       a:nth-child(2) {
         color: $dark;
-        font-weight: 700;
+        font-weight: bold;
       }
       a:not(:first-child) {
         background: url(../images/footerFirstLineSeperator.gif) no-repeat left
