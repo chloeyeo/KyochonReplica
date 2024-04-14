@@ -20,6 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // 키워드로 장소를 검색합니다
   searchPlaces();
 
+  // Select the form element
+  var form = document.getElementById("searchForm");
+
+  // Add event listener for form submission
+  form.addEventListener("submit", function (event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Call the searchPlaces function
+    searchPlaces();
+  });
+
   // 키워드 검색을 요청하는 함수입니다
   function searchPlaces() {
     var keyword = document.getElementById("keyword").value;
