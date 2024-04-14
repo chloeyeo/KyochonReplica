@@ -80,13 +80,14 @@ li {
 }
 .utilMenu.left ul li:nth-child(2) {
   background-color: black;
+}
+.utilMenu.left ul li:nth-child(2) a {
   color: white;
 }
 .utilMenu.right {
   position: absolute;
   top: 0;
   right: 2%;
-  color: #9d8f75;
 }
 .utilMenu.right li {
   padding: 5px 10px;
@@ -96,6 +97,9 @@ li {
 }
 .utilMenu.right li:not(:first-child) {
   background: url(../images/utilMenuRightLine.gif) no-repeat left center;
+}
+.utilMenu.right li a {
+  color: #9d8f75;
 }
 
 /* navigation(menu) */
@@ -225,11 +229,13 @@ li {
 .swiper-container.secondSwiper .title {
   display: inline-block;
   background-color: black;
-  color: white;
   border-radius: 20px;
   padding: 8px 13px;
-  font-size: 16px;
   margin-bottom: 10px;
+}
+.swiper-container.secondSwiper .title a {
+  color: white;
+  font-size: 16px;
 }
 .swiper-container.secondSwiper .swiper-button-prev.secondSwiper,
 .swiper-container.secondSwiper .swiper-button-next.secondSwiper {

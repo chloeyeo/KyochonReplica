@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return false;
       }
 
+      // const currentCoordinate
+
       // 장소검색 객체를 통해 키워드로 장소검색을 요청합니다
       ps.keywordSearch(keyword, placesSearchCB);
     }

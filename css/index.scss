@@ -96,7 +96,9 @@ li {
         }
         &:nth-child(2) {
           background-color: $dark;
-          color: $light;
+          a {
+            color: $light;
+          }
         }
       }
     }
@@ -105,7 +107,6 @@ li {
     position: absolute;
     top: 0;
     right: 2%;
-    color: $secondary;
     li {
       padding: 5px 10px;
       display: flex;
@@ -113,6 +114,9 @@ li {
       align-items: center;
       &:not(:first-child) {
         background: url(../images/utilMenuRightLine.gif) no-repeat left center; // this not working either!
+      }
+      a {
+        color: $secondary;
       }
     }
   }
@@ -263,11 +267,13 @@ li {
     .title {
       display: inline-block;
       background-color: $dark;
-      color: $light;
       border-radius: 20px;
       padding: 8px 13px; // y x
-      font-size: 16px;
       margin-bottom: 10px;
+      a {
+        color: $light;
+        font-size: 16px;
+      }
     }
     .swiper-button-prev.secondSwiper,
     .swiper-button-next.secondSwiper {
