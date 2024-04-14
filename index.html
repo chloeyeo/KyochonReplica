@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kyochon Replica</title>
-    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="icon" href="./images/favicon.ico" />
     <link
       href="https://fonts.googleapis.com/css?family=Noto Sans KR"
       rel="stylesheet"
@@ -227,7 +227,13 @@
             <div>
               <form onsubmit="searchPlaces(); return false;">
                 키워드 :
-                <input type="text" value="이태원 맛집" id="keyword" size="15" />
+                <input
+                  type="text"
+                  value="교촌치킨"
+                  placeholder="매장명 또는 지역을 입력"
+                  id="keyword"
+                  size="15"
+                />
                 <button type="submit">검색하기</button>
               </form>
             </div>
@@ -237,24 +243,8 @@
           <div id="pagination"></div>
         </div>
       </div>
-      <!-- <div class="map_wrap">
-        <div id="menu_wrap" class="bg_white">
-          <div class="option">
-            <div>
-              <form onsubmit="searchPlaces(); return false;">
-                키워드 :
-                <input type="text" value="이태원 맛집" id="keyword" size="15" />
-                <button type="submit">검색하기</button>
-              </form>
-            </div>
-          </div>
-          <hr />
-          <ul id="placesList"></ul>
-          <div id="pagination"></div>
-        </div>
-      </div> -->
 
-      <div class="storeSearch">
+      <!-- <div class="storeSearch">
         <h3>Store Search</h3>
         <div class="formWrap">
           <form class="form">
@@ -267,7 +257,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- News -->
       <div class="boxRight">
@@ -367,19 +357,15 @@
       </div>
     </footer>
     <!-- footer end -->
+    <!--Load Kakao Maps API - Services & Clusterer Library-->
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=8a9762e5493d3ed0abf75ddb0e833844&libraries=clusterer,services"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- type="module" to be able to import modules inside index js -->
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/map.js"></script>
   </body>
-  <!-- <script
-    type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a9762e5493d3ed0abf75ddb0e833844"
-  ></script> -->
-  <!-- services 라이브러리 불러오기 -->
-  <script
-    type="text/javascript"
-    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a9762e5493d3ed0abf75ddb0e833844&libraries=services"
-  ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- type="module" to be able to import modules inside index js -->
-  <script type="module" src="./js/index.js"></script>
-  <script type="module" src="./js/map.js"></script>
 </html>
