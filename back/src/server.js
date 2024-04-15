@@ -11,14 +11,14 @@ app.use(cors()); // can access this backend from anywhere now.
 // can congifure cors so that only frontend server can access.
 // cors config security, authorization etc per each folder
 
-// const { userRouter } = require("./routes/userRouter");
+const { storeRouter } = require("./routes/storeRouter");
 
 const server = async function () {
   try {
     await mongoose.connect(dbUrl);
     mongoose.set("debug", true); // to see data inputs into db
     console.log("db connected");
-    // app.use("/user", userRouter);
+    app.use("/store", storeRouter);
     app.listen(4000, function () {
       console.log("server on port 4000");
     });
